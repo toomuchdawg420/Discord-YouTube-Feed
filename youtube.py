@@ -6,7 +6,7 @@ import aiosqlite
 from fake_useragent import UserAgent
 ## note: need to use `poetry shell` in order to access lxml
 
-channel_ids = {'Taylor Swift': 'UCqECaJ8Gagnn7YCbPEzWH6g', 'RecordingAcademy': 'UCq4isO8ZYOZfmvGJ-_1UdIA'}  
+channel_ids = {'NFL': 'UCDVYQ4Zhbm3S2dlz7P1GBDg', '': ''}  
 # name of channel is not actually used in the script
 # channel ID's can be found on desktop easily
 # sometimes its in the url, e.g https://www.youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g - UCqECaJ8Gagnn7YCbPEzWH6g is the ID
@@ -19,7 +19,7 @@ ua = UserAgent(platforms='desktop')
 async def create_webhook(title, link, youtube_name, date):
     async with aiohttp.ClientSession() as session:
         # url is the discord webhook url, this allows us to post
-        discord_webhook_url = # enter a webhook url here
+        discord_webhook_url = https://discord.com/api/webhooks/1407952553894871050/VUnB58smiWQ9u8dGbPO4Xx2iv64YA2Cb-Oq0OE7-9Gmy5pigeuzJXaeTq5S-6lmlZvbl
         webhook = Webhook.from_url(discord_webhook_url, session=session)
 
         # https://docs.disnake.dev/en/latest/api/webhooks.html#disnake.Webhook.send
