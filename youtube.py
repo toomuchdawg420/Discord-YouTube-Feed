@@ -6,7 +6,7 @@ import aiosqlite
 from fake_useragent import UserAgent
 ## note: need to use `poetry shell` in order to access lxml
 
-channel_ids = {'NFL': 'UCDVYQ4Zhbm3S2dlz7P1GBDg', '': ''}  
+channel_ids = {'NFL': 'UCDVYQ4Zhbm3S2dlz7P1GBDg'}  
 # name of channel is not actually used in the script
 # channel ID's can be found on desktop easily
 # sometimes its in the url, e.g https://www.youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g - UCqECaJ8Gagnn7YCbPEzWH6g is the ID
@@ -23,10 +23,10 @@ async def create_webhook(title, link, youtube_name, date):
         webhook = Webhook.from_url(discord_webhook_url, session=session)
 
         # https://docs.disnake.dev/en/latest/api/webhooks.html#disnake.Webhook.send
-        # username = name of webhook user
+        # username = SultanofSwat
         ## await send(content=..., *, username=..., avatar_url=..., tts=False, ephemeral=..., suppress_embeds=..., flags=..., file=..., files=..., embed=..., embeds=..., allowed_mentions=..., view=..., components=..., thread=..., thread_name=..., applied_tags=..., wait=False, delete_after=..., poll=...)
 
-        webhook_username = YouTube Bot # enter name of the Webhook user, can be anything (in this case, it's YouTube Bot)
+        webhook_username = Sultan of Swat # enter name of the Webhook user, can be anything (in this case, it's YouTube Bot)
         webhook_avatar = "https://i.imgur.com/22Q9QyJ.png" # enter a url to a pic if you want a avatar
         await webhook.send(content=f"NEW UPLOAD FROM {youtube_name}!\n'{title}'\n{link}\n{date}", username=webhook_username, avatar_url=webhook_avatar)
         await asyncio.sleep(3)
